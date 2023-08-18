@@ -8,6 +8,7 @@ type FlexWrapperProps = {
   wrap?: string;
   mb?: string;
   gap?: string;
+  width?: string;
 };
 
 export const FlexWrapper = styled.div<FlexWrapperProps>`
@@ -19,4 +20,5 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   margin-bottom: ${(props) => props.mb || "0px"};
   gap: ${(props) => props.gap || "0px"};
+  width: ${(props) => props.width || "auto"};
 `;
