@@ -9,6 +9,7 @@ type FlexWrapperProps = {
   mb?: string;
   gap?: string;
   width?: string;
+  bgC?: string;
 };
 
 export const FlexWrapper = styled.div<FlexWrapperProps>`
@@ -20,5 +21,6 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   margin-bottom: ${(props) => props.mb || "0px"};
   gap: ${(props) => props.gap || "0px"};
-  width: ${(props) => props.width || "auto"};
+  max-width: ${(props) => props.width || "none"};
+  background-color: ${(props) => props.bgC || "transparent"};
 `;

@@ -1,23 +1,23 @@
 import styled from "styled-components";
+import Link from "../Link/Link";
 
 const Nav = () => {
   return (
     <NavStyled>
       <ul>
         <li>
-          <a href="#">Marketplace</a>
+          <Link hrefTo="www.google.com" lineH="160%" text="Marketplace" />
         </li>
         <li>
-          <a href="#">Artists</a>
+          <Link hrefTo="www.google.com" lineH="160%" text="Artists" />
         </li>
         <li>
-          <a href="#">Community</a>
+          <Link hrefTo="www.google.com" lineH="160%" text="Community" />
         </li>
         <li>
-          <a href="#">Collections</a>
+          <Link hrefTo="www.google.com" lineH="160%" text="Collections" />
         </li>
       </ul>
-      <a href="#">Contact</a>
     </NavStyled>
   );
 };
@@ -25,7 +25,13 @@ const Nav = () => {
 export default Nav;
 
 const NavStyled = styled.nav`
+  display: flex;
   ul {
     display: flex;
+    li {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
   }
 `;

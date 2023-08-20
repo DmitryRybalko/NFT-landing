@@ -3,17 +3,21 @@ import { FlexWrapper } from "../../components/FlexWrapper/FlexWrapper.styled";
 import Logo from "../../components/Logo/Logo";
 import SVGicon from "../../components/SVGicon/SVGicon";
 import { GridWrapperStyled } from "../../components/GridWrapper/GridWrapper.styled";
+import { TextStyled } from "../../components/Text/Text.styled";
+import Link from "../../components/Link/Link";
+import FooterLinksList from "../../components/Link/FooterLinksList";
+import FooterLinksItem from "../../components/Link/FooterLinksItem";
 
 const Footer = () => {
   return (
     <FooterStyled>
       <FooterTop>
-        <FlexWrapper direction="column">
+        <FlexWrapper width="272px" direction="column">
           <Logo />
-          <p>
+          <TextStyled margin="8px 0px 24px 0px">
             Discover NFTs by category, track the latest drop, and and follow the
             collections you love. Enjoy it!
-          </p>
+          </TextStyled>
           {/*переписать на ul, сделать отдельный компонент*/}
           <FlexWrapper width="132px" justify="space-between">
             <a href="www.facebook.com" target="_blank">
@@ -50,34 +54,100 @@ const Footer = () => {
             </a>
           </FlexWrapper>
         </FlexWrapper>
-        <GridWrapperStyled gridTempCol="106px 89px 94px 117px" gap="94px">
+        <GridWrapperStyled gridTempCol="122px 89px 94px 117px" gap="94px">
           {/*переписать на ul, сделать отдельный компонент*/}
-          <FlexWrapper direction="column">
-            <div>Explore</div>
-            <a href="#">Art Sign In</a>
-            <a href="#">Collectibles</a>
-            <a href="#">Domain Name</a>
-            <a href="#">Utility</a>
-          </FlexWrapper>
-          <FlexWrapper direction="column">
-            <div>Statistic</div>
-            <a href="#">Ranking</a>
-            <a href="#">Collectibles</a>
-            <a href="#">Activity</a>
-          </FlexWrapper>
-          <FlexWrapper direction="column">
-            <div>Company</div>
-            <a href="#">About Us</a>
-            <a href="#">Career</a>
-            <a href="#">Support</a>
-            <a href="#">Partners</a>
-          </FlexWrapper>
-          <FlexWrapper direction="column">
-            <div>Resources</div>
-            <a href="#">Help Center</a>
-            <a href="#">Platform Status</a>
-            <a href="#">Blog</a>
-          </FlexWrapper>
+          <FooterLinksList title="Explore">
+            <FooterLinksItem
+              margin="0px 0px 8px 0px"
+              text="Art Sign In"
+              hrefTo="www.google.com"
+              lineH="160%"
+            />
+            <FooterLinksItem
+              margin="0px 0px 8px 0px"
+              text="Collectibles"
+              hrefTo="www.google.com"
+              lineH="160%"
+            />
+            <FooterLinksItem
+              margin="0px 0px 8px 0px"
+              text="Domain Name"
+              hrefTo="www.google.com"
+              lineH="160%"
+            />
+            <FooterLinksItem
+              margin="0px 0px 8px 0px"
+              text="Utility"
+              hrefTo="www.google.com"
+              lineH="160%"
+            />
+          </FooterLinksList>
+          <FooterLinksList title="Statistic">
+            <FooterLinksItem
+              margin="0px 0px 8px 0px"
+              text="Ranking"
+              hrefTo="www.google.com"
+              lineH="160%"
+            />
+            <FooterLinksItem
+              margin="0px 0px 8px 0px"
+              text="Collectibles"
+              hrefTo="www.google.com"
+              lineH="160%"
+            />
+            <FooterLinksItem
+              margin="0px 0px 8px 0px"
+              text="Activity"
+              hrefTo="www.google.com"
+              lineH="160%"
+            />
+          </FooterLinksList>
+          <FooterLinksList title="Company">
+            <FooterLinksItem
+              margin="0px 0px 8px 0px"
+              text="About Us"
+              hrefTo="www.google.com"
+              lineH="160%"
+            />
+            <FooterLinksItem
+              margin="0px 0px 8px 0px"
+              text="Career"
+              hrefTo="www.google.com"
+              lineH="160%"
+            />
+            <FooterLinksItem
+              margin="0px 0px 8px 0px"
+              text="Support"
+              hrefTo="www.google.com"
+              lineH="160%"
+            />
+            <FooterLinksItem
+              margin="0px 0px 8px 0px"
+              text="Partners"
+              hrefTo="www.google.com"
+              lineH="160%"
+            />
+          </FooterLinksList>
+          <FooterLinksList title="Resources">
+            <FooterLinksItem
+              margin="0px 0px 8px 0px"
+              text="Help Center"
+              hrefTo="www.google.com"
+              lineH="160%"
+            />
+            <FooterLinksItem
+              margin="0px 0px 8px 0px"
+              text="Platform Status"
+              hrefTo="www.google.com"
+              lineH="160%"
+            />
+            <FooterLinksItem
+              margin="0px 0px 8px 0px"
+              text="Blog"
+              hrefTo="www.google.com"
+              lineH="160%"
+            />
+          </FooterLinksList>
         </GridWrapperStyled>
       </FooterTop>
       <FooterBottom>
@@ -85,10 +155,10 @@ const Footer = () => {
         <FlexWrapper>
           <ul>
             <li>
-              <a href="#">Privacy Policy</a>
+              <Link hrefTo="www.google.com" text="Privacy Policy" />
             </li>
             <li>
-              <a href="#">Terms & Conditions</a>
+              <Link hrefTo="www.google.com" text="Terms & Conditions" />
             </li>
           </ul>
         </FlexWrapper>

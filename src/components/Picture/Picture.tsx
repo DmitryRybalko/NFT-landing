@@ -1,6 +1,3 @@
-import imgAvif from "../../assets/img/nft8.avif";
-import imgWebp from "../../assets/img/nft1.webp";
-import imgJPG from "../../assets/img/nft1.jpg";
 import styled from "styled-components";
 
 const Picture = ({
@@ -10,6 +7,9 @@ const Picture = ({
   objectFit,
   objectPosition,
   mb,
+  imgAvif,
+  imgWebp,
+  imgJPG,
 }: ImgStyledProps) => {
   return (
     <picture>
@@ -38,6 +38,9 @@ type ImgStyledProps = {
   objectFit?: string;
   objectPosition?: string;
   mb?: string;
+  imgAvif?: string;
+  imgWebp?: string;
+  imgJPG?: string;
 };
 
 const ImgStyled = styled.img<ImgStyledProps>`
