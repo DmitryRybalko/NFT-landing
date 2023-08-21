@@ -12,6 +12,8 @@ import LinksContainer from "../../../components/Link/LinksContainer";
 import imgAvif from "../../../assets/img/nft1.avif";
 import imgWebp from "../../../assets/img/nft1.webp";
 import imgJPG from "../../../assets/img/nft1.jpg";
+import pseudoImg from "../../../assets/img/circle.png";
+import PseudoElementContainer from "../../../components/PseudoElementContainer/PseudoElementContainer.styled";
 
 const Main = () => {
   const theme = useTheme();
@@ -76,52 +78,59 @@ const Main = () => {
             />
           </List>
         </FlexWrapper>
-        <FlexWrapper position={"relative"}>
-          <Picture
-            width={"464px"}
-            height={"544px"}
-            objectFit={"cover"}
-            objectPosition={"top"}
-            position={"relative"}
-            imgAvif={imgAvif}
-            imgWebp={imgWebp}
-            imgJPG={imgJPG}
-          />
-          <CardWrapper position="absolute" bottom="-50px" right="-50px">
-            <FlexWrapper justify="space-between" mb="24px">
-              <FlexWrapper direction="column">
-                <TextStyled
-                  color={theme.colors.primaryCol}
-                  margin="0px 0px 8px 0px"
-                >
-                  Ends in
-                </TextStyled>
-                <TextStyled lineH="120%" fWeight="700">
-                  05:45:47
-                </TextStyled>
-              </FlexWrapper>
-              <FlexWrapper direction="column">
-                <TextStyled
-                  color={theme.colors.primaryCol}
-                  margin="0px 0px 8px 0px"
-                >
-                  Current bid
-                </TextStyled>
-                <TextStyled lineH="120%" fWeight="700">
-                  0.24ETH
-                </TextStyled>
-              </FlexWrapper>
-            </FlexWrapper>
-            <Link
-              color={theme.colors.primaryCol}
-              fontW="700"
-              border={`1px solid ${theme.colors.primaryCol}`}
-              padding="16px 89px"
-              text="Place A Bid"
-              hrefTo="www.google.com"
+        <PseudoElementContainer
+          top="223px"
+          left="-60px"
+          img={pseudoImg}
+          pseudoW="171px"
+          pseudoH="171px"
+        >
+          <FlexWrapper position={"relative"}>
+            <Picture
+              width={"464px"}
+              height={"544px"}
+              objectFit={"cover"}
+              objectPosition={"top"}
+              imgAvif={imgAvif}
+              imgWebp={imgWebp}
+              imgJPG={imgJPG}
             />
-          </CardWrapper>
-        </FlexWrapper>
+            <CardWrapper position="absolute" bottom="-50px" right="-50px">
+              <FlexWrapper justify="space-between" mb="24px">
+                <FlexWrapper direction="column">
+                  <TextStyled
+                    color={theme.colors.primaryCol}
+                    margin="0px 0px 8px 0px"
+                  >
+                    Ends in
+                  </TextStyled>
+                  <TextStyled lineH="120%" fWeight="700">
+                    05:45:47
+                  </TextStyled>
+                </FlexWrapper>
+                <FlexWrapper direction="column">
+                  <TextStyled
+                    color={theme.colors.primaryCol}
+                    margin="0px 0px 8px 0px"
+                  >
+                    Current bid
+                  </TextStyled>
+                  <TextStyled lineH="120%" fWeight="700">
+                    0.24ETH
+                  </TextStyled>
+                </FlexWrapper>
+              </FlexWrapper>
+              <Link
+                color={theme.colors.primaryCol}
+                fontW="700"
+                border={`1px solid ${theme.colors.primaryCol}`}
+                padding="16px 89px"
+                text="Place A Bid"
+                hrefTo="www.google.com"
+              />
+            </CardWrapper>
+          </FlexWrapper>
+        </PseudoElementContainer>
       </FlexWrapper>
     </MainStyled>
   );

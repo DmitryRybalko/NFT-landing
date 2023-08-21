@@ -8,21 +8,33 @@ import { Heading } from "../../../components/headings/Headings.styled";
 import img1Avif from "../../../assets/img/nft12.avif";
 import img1Webp from "../../../assets/img/nft12.webp";
 import img1JPG from "../../../assets/img/nft12.jpg";
+import PseudoElementContainer from "../../../components/PseudoElementContainer/PseudoElementContainer.styled";
+import pseudoImg from "../../../assets/img/nft13.jpg";
 
 const SubscribeSection = () => {
   return (
     <Section>
-      <FlexWrapper justify="space-between">
-        <Picture
-          imgAvif={img1Avif}
-          imgWebp={img1Webp}
-          imgJPG={img1JPG}
-          width="410px"
-          height="376px"
-          position="relative"
-          objectFit="cover"
-          objectPosition="50% 30%"
-        />
+      <FlexWrapper justify="space-between" padding="0px 0px 0px 30px">
+        <PseudoElementContainer
+          top="75px"
+          left="318px"
+          img={pseudoImg}
+          pseudoW="282px"
+          pseudoH="348px"
+        >
+          <Picture
+            imgAvif={img1Avif}
+            imgWebp={img1Webp}
+            imgJPG={img1JPG}
+            width="410px"
+            height="376px"
+            position="relative"
+            objectFit="cover"
+            objectPosition="50% 30%"
+            rotate="rotate(-11deg)"
+          />
+        </PseudoElementContainer>
+
         <FlexWrapper direction="column" justify="flex-start" width="520px">
           <Heading as={"h2"} maxW="520px" fSize="48px" margin="0 0 20px 0">
             Subscribe And <SpanStyled>get our Updates</SpanStyled> Every Week

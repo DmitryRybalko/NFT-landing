@@ -10,6 +10,8 @@ const Picture = ({
   imgAvif,
   imgWebp,
   imgJPG,
+  rotate,
+  transform,
 }: ImgStyledProps) => {
   return (
     <picture>
@@ -24,6 +26,8 @@ const Picture = ({
         objectPosition={objectPosition}
         alt="nft"
         mb={mb}
+        rotate={rotate}
+        transform={transform}
       />
     </picture>
   );
@@ -41,6 +45,8 @@ type ImgStyledProps = {
   imgAvif?: string;
   imgWebp?: string;
   imgJPG?: string;
+  rotate?: string;
+  transform?: string;
 };
 
 const ImgStyled = styled.img<ImgStyledProps>`
@@ -51,4 +57,5 @@ const ImgStyled = styled.img<ImgStyledProps>`
   object-fit: ${(props) => props.objectFit || "fill"};
   object-position: ${(props) => props.objectPosition || "50% 50%"};
   margin-bottom: ${(props) => props.mb || "0px"};
+  transform: ${(props) => props.rotate || "rotate(0deg)"};
 `;

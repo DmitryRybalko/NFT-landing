@@ -10,6 +10,8 @@ import { Heading } from "../../../components/headings/Headings.styled";
 import imgAvif from "../../../assets/img/nft6.avif";
 import imgWebp from "../../../assets/img/nft6.webp";
 import imgJPG from "../../../assets/img/nft6.jpg";
+import pseudoImg from "../../../assets/img/nft5.jpg";
+import PseudoElementContainer from "../../../components/PseudoElementContainer/PseudoElementContainer.styled";
 
 const NftSection = () => {
   const theme = useTheme();
@@ -39,18 +41,26 @@ const NftSection = () => {
             </LinksContainer>
           </FlexWrapper>
         </FlexWrapper>
-        <FlexWrapper>
-          <Picture
-            width={"410px"}
-            height={"475px"}
-            objectFit={"cover"}
-            objectPosition={"top"}
-            position={"relative"}
-            imgAvif={imgAvif}
-            imgWebp={imgWebp}
-            imgJPG={imgJPG}
-          />
-        </FlexWrapper>
+        <PseudoElementContainer
+          top="159px"
+          left="-330px"
+          img={pseudoImg}
+          pseudoW="410px"
+          pseudoH="400px"
+        >
+          <FlexWrapper>
+            <Picture
+              width={"410px"}
+              height={"475px"}
+              objectFit={"cover"}
+              objectPosition={"top"}
+              position={"relative"}
+              imgAvif={imgAvif}
+              imgWebp={imgWebp}
+              imgJPG={imgJPG}
+            />
+          </FlexWrapper>
+        </PseudoElementContainer>
       </FlexWrapper>
     </Section>
   );
