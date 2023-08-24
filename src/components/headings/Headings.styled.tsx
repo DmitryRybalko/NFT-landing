@@ -18,4 +18,9 @@ export const Heading = styled.h1<HeadingsStyledPropsType>`
   font-family: ${(props) => props.fFamily || "Canela Medium"};
   margin: ${(props) => props.margin || "0px"};
   max-width: ${(props) => props.maxW || "auto"};
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.laptopSM}) {
+    font-size: 39px;
+    max-width: 343px;
+    text-align: center;
+  }
 `;

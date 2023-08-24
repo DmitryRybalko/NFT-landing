@@ -12,4 +12,5 @@ export const GridItemStyled = styled.div<GridItemProps>`
   grid-row-end: ${(props) => props.gridRowEnd || "auto"};
   width: ${(props) => props.width || "auto"};
   height: ${(props) => props.height || "auto"};
+  position: relative;
 `;

@@ -15,4 +15,7 @@ export default LinksContainer;
 const LinksContainerStyled = styled.div<LinksContainerStyledProps>`
   display: flex;
   margin: ${(props) => props.margin || "0px"};
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.laptopSM}) {
+    margin: 0px;
+  }
 `;

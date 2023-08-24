@@ -20,7 +20,7 @@ const Main = () => {
 
   return (
     <MainStyled>
-      <FlexWrapper justify="space-between">
+      <FlexWrapper directionMob="column" justify="space-between">
         <FlexWrapper width="544px" direction={"column"}>
           <Heading
             fSize="64px"
@@ -84,6 +84,7 @@ const Main = () => {
           img={pseudoImg}
           pseudoW="171px"
           pseudoH="171px"
+          animation="spin 5s linear infinite"
         >
           <FlexWrapper position={"relative"}>
             <Picture
@@ -140,4 +141,7 @@ export default Main;
 
 const MainStyled = styled.main`
   margin-bottom: 184px;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.laptopSM}) {
+    margin-bottom: 80px;
+  }
 `;

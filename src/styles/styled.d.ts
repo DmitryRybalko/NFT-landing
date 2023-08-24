@@ -1,4 +1,3 @@
-// styled.d.ts
 import "styled-components";
 
 declare module "styled-components" {
@@ -11,6 +10,17 @@ declare module "styled-components" {
       fontColDark: string;
       gradient: string;
       whiteCol: string;
+    };
+    breakpoints: {
+      mobileSM: string;
+      mobileMD: string;
+      mobileLG: string;
+      tabletSM: string;
+      tabletMD: string;
+      tabletLG: string;
+      laptopSM: string;
+      laptopMD: string;
+      laptopLG: string;
     };
   }
 }

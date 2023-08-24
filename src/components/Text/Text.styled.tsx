@@ -18,4 +18,9 @@ export const TextStyled = styled.p<TextStyledProps>`
   font-family: ${(props) => props.fontF || "Inter Regular"};
   margin: ${(props) => props.margin || "0px"};
   max-width: ${(props) => props.maxW || "none"};
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.laptopSM}) {
+    max-width: 343px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
 `;

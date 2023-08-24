@@ -1,4 +1,3 @@
-import "./App.css";
 import PageWrapper from "./components/PageWrapper/Wrapper";
 import Footer from "./layout/footer/Footer";
 import Header from "./layout/header/Header";

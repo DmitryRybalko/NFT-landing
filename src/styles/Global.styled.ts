@@ -47,4 +47,8 @@ button {
     background-color: unset;
     border: none;
 }
+
+svg {
+  fill: white;
+}
 `;

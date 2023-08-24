@@ -1,21 +1,22 @@
-import styled from "styled-components";
-import Link from "../Link/Link";
+import styled, { useTheme } from "styled-components";
+import LinkNav from "../Link/LinkNav";
 
 const Nav = () => {
+  const theme = useTheme();
   return (
-    <NavStyled>
+    <NavStyled theme={theme}>
       <ul>
         <li>
-          <Link hrefTo="www.google.com" lineH="160%" text="Marketplace" />
+          <LinkNav hrefTo="www.google.com" text="Marketplace" />
         </li>
         <li>
-          <Link hrefTo="www.google.com" lineH="160%" text="Artists" />
+          <LinkNav hrefTo="www.google.com" text="Artists" />
         </li>
         <li>
-          <Link hrefTo="www.google.com" lineH="160%" text="Community" />
+          <LinkNav hrefTo="www.google.com" text="Community" />
         </li>
         <li>
-          <Link hrefTo="www.google.com" lineH="160%" text="Collections" />
+          <LinkNav hrefTo="www.google.com" text="Collections" />
         </li>
       </ul>
     </NavStyled>
@@ -32,6 +33,16 @@ const NavStyled = styled.nav`
       &:not(:last-child) {
         margin-right: 40px;
       }
+      &:first-child {
+        a {
+          &::before {
+            width: 100%;
+          }
+        }
+      }
     }
+  }
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.laptopSM}) {
+    display: none;
   }
 `;

@@ -29,4 +29,8 @@ const HeaderStyled = styled.header`
   align-items: center;
   padding: 28px 0;
   margin-bottom: 92px;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tabletSM}) {
+    margin-bottom: 60px;
+    padding: 40px 0px 0px 0px;
+  }
 `;

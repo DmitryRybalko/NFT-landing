@@ -11,6 +11,8 @@ type FlexWrapperProps = {
   width?: string;
   bgC?: string;
   padding?: string;
+  directionMob?: string;
+  orderMob?: string;
 };
 
 export const FlexWrapper = styled.div<FlexWrapperProps>`
@@ -25,4 +27,12 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
   max-width: ${(props) => props.width || "none"};
   padding: ${(props) => props.padding || "0px"};
   background-color: ${(props) => props.bgC || "transparent"};
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.laptopSM}) {
+    flex-direction: ${(props) => props.directionMob};
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    //background-color: green;
+    order: ${(props) => props.orderMob || "transparent"};
+  }
 `;

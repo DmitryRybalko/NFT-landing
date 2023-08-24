@@ -12,12 +12,16 @@ const Picture = ({
   imgJPG,
   rotate,
   transform,
+  radius,
+  widthMob,
+  heightMob,
 }: ImgStyledProps) => {
   return (
     <picture>
       <source srcSet={imgAvif} type="image/avif" />
       <source srcSet={imgWebp} type="image/webp" />
       <ImgStyled
+        radius={radius}
         position={position}
         width={width}
         height={height}
@@ -28,6 +32,8 @@ const Picture = ({
         mb={mb}
         rotate={rotate}
         transform={transform}
+        widthMob={widthMob}
+        heightMob={heightMob}
       />
     </picture>
   );
@@ -47,10 +53,13 @@ type ImgStyledProps = {
   imgJPG?: string;
   rotate?: string;
   transform?: string;
+  radius?: string;
+  widthMob?: string;
+  heightMob?: string;
 };
 
 const ImgStyled = styled.img<ImgStyledProps>`
-  border-radius: 24px;
+  border-radius: ${(props) => props.radius || "24px"};
   width: ${(props) => props.width || "100%"};
   height: ${(props) => props.height || "100%"};
   position: ${(props) => props.position || "static"};
@@ -58,4 +67,9 @@ const ImgStyled = styled.img<ImgStyledProps>`
   object-position: ${(props) => props.objectPosition || "50% 50%"};
   margin-bottom: ${(props) => props.mb || "0px"};
   transform: ${(props) => props.rotate || "rotate(0deg)"};
+  display: inline-block;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.laptopSM}) {
+    width: ${(props) => props.widthMob || "100%"};
+    height: ${(props) => props.heightMob || "100%"};
+  }
 `;

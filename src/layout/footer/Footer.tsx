@@ -172,6 +172,12 @@ export default Footer;
 const FooterStyled = styled.footer`
   display: flex;
   flex-direction: column;
+  a {
+    transition: color 0.2s ease;
+    &:hover {
+      color: #d3f85a;
+    }
+  }
 `;
 
 const FooterTop = styled.div`
@@ -181,6 +187,9 @@ const FooterTop = styled.div`
   margin-bottom: 48px;
   border-bottom: 1px solid #838382;
   min-height: 232px;
+  a:hover svg {
+    fill: #d3f85a;
+  }
 `;
 
 const FooterBottom = styled.div`

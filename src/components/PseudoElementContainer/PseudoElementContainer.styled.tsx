@@ -8,6 +8,7 @@ type PseudoElementContainerTypes = {
   pseudoH?: string;
   top?: string;
   left?: string;
+  animation?: string;
 };
 
 const PseudoElementContainer = ({
@@ -17,6 +18,7 @@ const PseudoElementContainer = ({
   pseudoH,
   left,
   top,
+  animation,
 }: PseudoElementContainerTypes) => {
   return (
     <PseudoElementContainerStyled
@@ -25,6 +27,7 @@ const PseudoElementContainer = ({
       pseudoH={pseudoH}
       left={left}
       top={top}
+      animation={animation}
     >
       {children}
     </PseudoElementContainerStyled>
@@ -47,5 +50,14 @@ const PseudoElementContainerStyled = styled.div<PseudoElementContainerTypes>`
     background-image: url(${(props) => props.img});
     background-size: cover;
     border-radius: 24px;
+    animation: ${(props) => props.animation || "none"};
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   }
 `;
